@@ -1,18 +1,195 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginEnd="20dp"
+        android:paddingBottom="16dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="3dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/relative_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/text_view_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Favorite sport"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/circle_cyan_color" />
+
+                <TextView
+                    android:id="@+id/text_view_title_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_view_title"
+                    android:text="Select Your Favorite sport" />
+
+                <TextView
+                    android:id="@+id/text_view_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_view_title_small"
+                    android:layout_marginTop="8dp"
+                    android:text="Choosing a sport helps us know what kind of events tp show you first in the screen EXPLORE. Of course, you can always filter the results and look for any other sport." />
+
+
+                <LinearLayout
+                    android:id="@+id/linear_layout_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_view_description"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/image_view_baseball"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_below="@id/text_view_description"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/ic_circle_grey"
+                        android:backgroundTint="@color/colorLightGrey"
+                        android:padding="23dp"
+                        android:src="@drawable/ic_baseball_grey" />
+
+                    <TextView
+                        android:id="@+id/text_view_below_baseball"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/image_view_baseball"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Baseball"
+                        android:textAlignment="center" />
+
+
+                    <ImageView
+                        android:id="@+id/image_view_cestaPunta"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_below="@id/text_view_below_baseball"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/ic_circle_grey"
+                        android:backgroundTint="@color/colorLightGrey"
+                        android:padding="23dp"
+                        android:src="@drawable/ic_cesta_grey" />
+
+                    <TextView
+                        android:id="@+id/text_view_below_cestaPunta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/image_view_cestaPunta"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Cesta punta" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/linear_layout_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_view_description"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/image_view_basketball"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/ic_circle_grey"
+                        android:backgroundTint="@color/colorLightGrey"
+                        android:padding="23dp"
+                        android:src="@drawable/ic_basketball_grey" />
+
+                    <TextView
+                        android:id="@+id/text_view_below_basketball"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Basketball"
+                        android:textAlignment="center" />
+
+
+                    <ImageView
+                        android:id="@+id/image_view_cycling"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/ic_circle_grey"
+                        android:backgroundTint="@color/colorLightGrey"
+                        android:padding="23dp"
+                        android:src="@drawable/ic_cycling_grey" />
+
+                    <TextView
+                        android:id="@+id/text_view_below_cycling"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/image_view_cestaPunta"
+                        android:layout_marginTop="8dp"
+                        android:text="Cycling"
+                        android:textAlignment="center" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_below="@id/linear_layout_left"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/rounded_button"
+                    android:paddingStart="50dp"
+                    android:paddingEnd="50dp"
+                    android:text="Accept"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>
